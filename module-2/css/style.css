@@ -1,0 +1,90 @@
+/*
+* Assignment: JSP Dynamic Movie Data Page
+* Author: Nazir Knuckles
+* Description: External stylesheet used to format the JSP movie data page.
+*/
+
+body {
+margin: 0;
+padding: 0;
+font-family: Arial, Helvetica, sans-serif;
+background-color: #111111;
+color: #eeeeee;
+}
+
+header {
+padding: 40px 20px;
+text-align: center;
+background: linear-gradient(135deg, #8b0000, #111111);
+}
+
+header h1 {
+margin: 0 0 10px;
+font-size: 36px;
+}
+
+header p {
+margin: 0;
+font-size: 17px;
+}
+
+main {
+width: 90%;
+max-width: 1000px;
+margin: 30px auto;
+}
+
+section {
+margin-bottom: 35px;
+}
+
+.description,
+.data-section,
+.field-description {
+background-color: #1c1c1c;
+padding: 25px;
+border-radius: 10px;
+}
+
+h2 {
+color: #ff4444;
+margin-top: 0;
+}
+
+p {
+line-height: 1.6;
+}
+
+table {
+width: 100%;
+border-collapse: collapse;
+margin-top: 20px;
+}
+
+th,
+td {
+padding: 14px;
+text-align: left;
+border: 1px solid #444444;
+}
+
+th {
+background-color: #8b0000;
+color: white;
+}
+
+td {
+background-color: #242424;
+}
+
+tr:hover td {
+background-color: #333333;
+}
+
+footer {
+text-align: center;
+padding: 25px;
+margin-top: 40px;
+background-color: #080808;
+color: #aaaaaa;
+}
