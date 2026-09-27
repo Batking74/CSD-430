@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Restaurant Experience Review</title>
+    <style>
+        body { font-family: Arial, sans-serif; max-width: 760px; margin: 2rem auto; padding: 0 1rem; line-height: 1.5; }
+        fieldset { margin: 1rem 0; padding: 1rem; }
+        label { display: block; margin: 0.65rem 0; }
+        .inline label { display: inline-block; margin-right: 1rem; }
+        input[type="text"], input[type="date"], select, textarea { width: 100%; max-width: 520px; padding: 0.55rem; box-sizing: border-box; }
+        button { padding: 0.7rem 1.2rem; cursor: pointer; }
+    </style>
+</head>
+<body>
+    <!--
+        Name: Nazir Knuckles
+        Date: September 27, 2026
+        Assignment: CSD 430 - Restaurant Experience Review Form
+        Purpose: Collect a customer's restaurant visit feedback and submit it to a JSP results page.
+        Source: Original student assignment draft; AI assistance used to generate this code.
+    -->
+    <h1>Restaurant Experience Review</h1>
+    <p>Please share your feedback about your recent visit. Fields marked with an asterisk are required.</p>
+
+    <form action="reviewResults.jsp" method="post">
+        <fieldset>
+            <legend>Visit Information</legend>
+
+            <label for="customerName">Nazir Knuckles</label>
+            <input type="text" id="customerName" name="customerName" maxlength="100" required>
+
+            <label for="visitDate">Date of visit *</label>
+            <input type="date" id="visitDate" name="visitDate" required>
+
+            <label for="restaurantName">Restaurant name *</label>
+            <input type="text" id="restaurantName" name="restaurantName" maxlength="120" required>
+
+            <label for="mealType">Meal type *</label>
+            <select id="mealType" name="mealType" required>
+                <option value="">-- Select a meal --</option>
+                <option value="Breakfast">Breakfast</option>
+                <option value="Brunch">Brunch</option>
+                <option value="Lunch">Lunch</option>
+                <option value="Dinner">Dinner</option>
+                <option value="Late-night">Late-night</option>
+            </select>
+        </fieldset>
+
+        <fieldset>
+            <legend>Rate Your Experience</legend>
+
+            <p>Overall rating *</p>
+            <div class="inline">
+                <label><input type="radio" name="rating" value="1 - Poor" required> 1 - Poor</label>
+                <label><input type="radio" name="rating" value="2 - Fair"> 2 - Fair</label>
+                <label><input type="radio" name="rating" value="3 - Good"> 3 - Good</label>
+                <label><input type="radio" name="rating" value="4 - Very Good"> 4 - Very Good</label>
+                <label><input type="radio" name="rating" value="5 - Excellent"> 5 - Excellent</label>
+            </div>
+
+            <p>What stood out? Select all that apply.</p>
+            <div class="inline">
+                <label><input type="checkbox" name="highlights" value="Food quality"> Food quality</label>
+                <label><input type="checkbox" name="highlights" value="Customer service"> Customer service</label>
+                <label><input type="checkbox" name="highlights" value="Atmosphere"> Atmosphere</label>
+                <label><input type="checkbox" name="highlights" value="Value for money"> Value for money</label>
+                <label><input type="checkbox" name="highlights" value="Wait time"> Wait time</label>
+            </div>
+
+            <label for="comments">Additional comments</label>
+            <textarea id="comments" name="comments" rows="5" maxlength="2000" placeholder="Tell us what you liked or what could be improved."></textarea>
+
+            <label><input type="checkbox" name="recommend" value="Yes"> I would recommend this restaurant to others.</label>
+        </fieldset>
+
+        <button type="submit">Submit Review</button>
+        <button type="reset">Clear Form</button>
+    </form>
+</body>
+</html>
